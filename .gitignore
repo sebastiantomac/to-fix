@@ -1,3 +1,19 @@
+# macOS
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+out/
+*.log
+
+# IDE (optional)
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+
 # Compiled class file
 *.class
 

@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.tomac'
+version = '1.0-SNAPSHOT'
+
+description = 'FIX 5.0SP2 Message Containers based on the FIX Repository (from fixprotocol.org) to QuickFix formatted XML.'
+java.sourceCompatibility = JavaVersion.VERSION_17
+java.targetCompatibility = JavaVersion.VERSION_17
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+
+    implementation 'org.dom4j:dom4j:2.1.4'
+    implementation 'org.quickfixj:quickfixj-core:2.3.1'
+    implementation 'org.quickfixj:quickfixj-messages-fix50:2.3.1' // For FIX 5.0 messages
+}
